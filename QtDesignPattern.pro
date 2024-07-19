@@ -4,5 +4,4 @@ SUBDIRS += \
     AbstractFactory \
     FactoryMethod \
     SimpleFactory \
-    Singleton \
     Singleton

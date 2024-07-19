@@ -38,7 +38,6 @@ SUBTARGETS    =  \
 		sub-AbstractFactory \
 		sub-FactoryMethod \
 		sub-SimpleFactory \
-		sub-Singleton \
 		sub-Singleton
 
 
@@ -141,39 +140,6 @@ sub-SimpleFactory-uninstall_subtargets: FORCE
 	@if not exist SimpleFactory\ mkdir SimpleFactory\ & if not exist SimpleFactory\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd SimpleFactory\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\SimpleFactory\SimpleFactory.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
-sub-Singleton-qmake_all:  FORCE
-	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
-	cd Singleton\ && $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Singleton\ && $(MAKE) -f Makefile qmake_all
-sub-Singleton: $(MAKEFILE) FORCE
-	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile
-sub-Singleton-make_first: FORCE
-	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile 
-sub-Singleton-all: FORCE
-	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile all
-sub-Singleton-clean: FORCE
-	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile clean
-sub-Singleton-distclean: FORCE
-	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile distclean
-sub-Singleton-install_subtargets: FORCE
-	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile install
-sub-Singleton-uninstall_subtargets: FORCE
-	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile uninstall
 sub-Singleton-qmake_all:  FORCE
 	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
 	cd Singleton\ && $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -390,7 +356,6 @@ Makefile: ..\QtDesignPattern.pro D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\win32
 		D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt_config.prf \
 		D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\win32-msvc\qmake.conf \
 		D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\spec_post.prf \
-		.qmake.stash \
 		D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exclusive_builds.prf \
 		D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\msvc-version.conf \
 		D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\toolchain.prf \
@@ -593,7 +558,6 @@ D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt_functions.prf:
 D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\qt_config.prf:
 D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\win32-msvc\qmake.conf:
 D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\spec_post.prf:
-.qmake.stash:
 D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\exclusive_builds.prf:
 D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\common\msvc-version.conf:
 D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\toolchain.prf:
@@ -616,16 +580,16 @@ D:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\features\lex.prf:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\QtDesignPattern.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
 
-qmake_all: sub-AbstractFactory-qmake_all sub-FactoryMethod-qmake_all sub-SimpleFactory-qmake_all sub-Singleton-qmake_all sub-Singleton-qmake_all FORCE
+qmake_all: sub-AbstractFactory-qmake_all sub-FactoryMethod-qmake_all sub-SimpleFactory-qmake_all sub-Singleton-qmake_all FORCE
 
-make_first: sub-AbstractFactory-make_first sub-FactoryMethod-make_first sub-SimpleFactory-make_first sub-Singleton-make_first sub-Singleton-make_first  FORCE
-all: sub-AbstractFactory-all sub-FactoryMethod-all sub-SimpleFactory-all sub-Singleton-all sub-Singleton-all  FORCE
-clean: sub-AbstractFactory-clean sub-FactoryMethod-clean sub-SimpleFactory-clean sub-Singleton-clean sub-Singleton-clean  FORCE
-distclean: sub-AbstractFactory-distclean sub-FactoryMethod-distclean sub-SimpleFactory-distclean sub-Singleton-distclean sub-Singleton-distclean  FORCE
+make_first: sub-AbstractFactory-make_first sub-FactoryMethod-make_first sub-SimpleFactory-make_first sub-Singleton-make_first  FORCE
+all: sub-AbstractFactory-all sub-FactoryMethod-all sub-SimpleFactory-all sub-Singleton-all  FORCE
+clean: sub-AbstractFactory-clean sub-FactoryMethod-clean sub-SimpleFactory-clean sub-Singleton-clean  FORCE
+distclean: sub-AbstractFactory-distclean sub-FactoryMethod-distclean sub-SimpleFactory-distclean sub-Singleton-distclean  FORCE
 	-$(DEL_FILE) Makefile
 	-$(DEL_FILE) .qmake.stash
-install_subtargets: sub-AbstractFactory-install_subtargets sub-FactoryMethod-install_subtargets sub-SimpleFactory-install_subtargets sub-Singleton-install_subtargets sub-Singleton-install_subtargets FORCE
-uninstall_subtargets: sub-AbstractFactory-uninstall_subtargets sub-FactoryMethod-uninstall_subtargets sub-SimpleFactory-uninstall_subtargets sub-Singleton-uninstall_subtargets sub-Singleton-uninstall_subtargets FORCE
+install_subtargets: sub-AbstractFactory-install_subtargets sub-FactoryMethod-install_subtargets sub-SimpleFactory-install_subtargets sub-Singleton-install_subtargets FORCE
+uninstall_subtargets: sub-AbstractFactory-uninstall_subtargets sub-FactoryMethod-uninstall_subtargets sub-SimpleFactory-uninstall_subtargets sub-Singleton-uninstall_subtargets FORCE
 
 sub-AbstractFactory-debug:
 	@if not exist AbstractFactory\ mkdir AbstractFactory\ & if not exist AbstractFactory\ exit 1
@@ -643,11 +607,7 @@ sub-Singleton-debug:
 	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile debug
-sub-Singleton-debug:
-	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile debug
-debug: sub-AbstractFactory-debug sub-FactoryMethod-debug sub-SimpleFactory-debug sub-Singleton-debug sub-Singleton-debug
+debug: sub-AbstractFactory-debug sub-FactoryMethod-debug sub-SimpleFactory-debug sub-Singleton-debug
 
 sub-AbstractFactory-release:
 	@if not exist AbstractFactory\ mkdir AbstractFactory\ & if not exist AbstractFactory\ exit 1
@@ -665,11 +625,7 @@ sub-Singleton-release:
 	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile release
-sub-Singleton-release:
-	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile release
-release: sub-AbstractFactory-release sub-FactoryMethod-release sub-SimpleFactory-release sub-Singleton-release sub-Singleton-release
+release: sub-AbstractFactory-release sub-FactoryMethod-release sub-SimpleFactory-release sub-Singleton-release
 
 sub-AbstractFactory-check:
 	@if not exist AbstractFactory\ mkdir AbstractFactory\ & if not exist AbstractFactory\ exit 1
@@ -687,11 +643,7 @@ sub-Singleton-check:
 	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
-sub-Singleton-check:
-	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile check
-check: sub-AbstractFactory-check sub-FactoryMethod-check sub-SimpleFactory-check sub-Singleton-check sub-Singleton-check
+check: sub-AbstractFactory-check sub-FactoryMethod-check sub-SimpleFactory-check sub-Singleton-check
 
 sub-AbstractFactory-benchmark:
 	@if not exist AbstractFactory\ mkdir AbstractFactory\ & if not exist AbstractFactory\ exit 1
@@ -709,11 +661,7 @@ sub-Singleton-benchmark:
 	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
 	@set MAKEFLAGS=$(MAKEFLAGS)
 	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
-sub-Singleton-benchmark:
-	@if not exist Singleton\ mkdir Singleton\ & if not exist Singleton\ exit 1
-	@set MAKEFLAGS=$(MAKEFLAGS)
-	cd Singleton\ && ( if not exist Makefile $(QMAKE) -o Makefile E:\DesignPatterns\DesignPatterns\Singleton\Singleton.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug" ) && $(MAKE) -f Makefile benchmark
-benchmark: sub-AbstractFactory-benchmark sub-FactoryMethod-benchmark sub-SimpleFactory-benchmark sub-Singleton-benchmark sub-Singleton-benchmark
+benchmark: sub-AbstractFactory-benchmark sub-FactoryMethod-benchmark sub-SimpleFactory-benchmark sub-Singleton-benchmark
 install:install_subtargets  FORCE
 
 uninstall: uninstall_subtargets FORCE

@@ -1,4 +1,4 @@
-#ifndef CONCRETE_FACTORY_H
+﻿#ifndef CONCRETE_FACTORY_H
 #define CONCRETE_FACTORY_H
 
 #include "factory.h"

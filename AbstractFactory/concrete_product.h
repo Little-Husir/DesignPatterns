@@ -1,4 +1,4 @@
-#ifndef CONCRETE_PRODUCT_H
+﻿#ifndef CONCRETE_PRODUCT_H
 #define CONCRETE_PRODUCT_H
 
 #include "product.h"
