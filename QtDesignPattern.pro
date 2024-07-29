@@ -5,6 +5,7 @@ SUBDIRS += \
     Adapter \
     Bridge \
     Builder \
+    Decorator \
     FactoryMethod \
     Prototype \
     SimpleFactory \
