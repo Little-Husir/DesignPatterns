@@ -7,6 +7,7 @@ SUBDIRS += \
     Builder \
     Composite \
     Decorator \
+    Facade \
     FactoryMethod \
     Prototype \
     SimpleFactory \
