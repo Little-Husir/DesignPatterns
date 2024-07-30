@@ -13,4 +13,5 @@ SUBDIRS += \
     Prototype \
     Proxy \
     SimpleFactory \
-    Singleton
+    Singleton \
+    TemplateMethod
