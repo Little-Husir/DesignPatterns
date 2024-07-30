@@ -11,5 +11,6 @@ SUBDIRS += \
     FactoryMethod \
     Flyweight \
     Prototype \
+    Proxy \
     SimpleFactory \
     Singleton
