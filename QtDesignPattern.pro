@@ -9,6 +9,7 @@ SUBDIRS += \
     Decorator \
     Facade \
     FactoryMethod \
+    Flyweight \
     Prototype \
     SimpleFactory \
     Singleton
