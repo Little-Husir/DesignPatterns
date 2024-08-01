@@ -5,6 +5,8 @@ SUBDIRS += \
     Adapter \
     Bridge \
     Builder \
+    Command \
+    Command_Queue \
     Composite \
     Decorator \
     Facade \
