@@ -12,6 +12,7 @@ SUBDIRS += \
     Facade \
     FactoryMethod \
     Flyweight \
+    Observer \
     Prototype \
     Proxy \
     SimpleFactory \
