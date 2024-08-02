@@ -12,6 +12,7 @@ SUBDIRS += \
     Facade \
     FactoryMethod \
     Flyweight \
+    Mediator \
     Observer \
     Prototype \
     Proxy \
