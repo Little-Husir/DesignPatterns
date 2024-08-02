@@ -13,6 +13,7 @@ SUBDIRS += \
     FactoryMethod \
     Flyweight \
     Mediator \
+    Memento \
     Observer \
     Prototype \
     Proxy \
