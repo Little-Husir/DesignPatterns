@@ -19,4 +19,5 @@ SUBDIRS += \
     Proxy \
     SimpleFactory \
     Singleton \
+    State \
     TemplateMethod
