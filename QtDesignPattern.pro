@@ -22,4 +22,5 @@ SUBDIRS += \
     Singleton \
     State \
     Strategy \
-    TemplateMethod
+    TemplateMethod \
+    Visitor
