@@ -5,6 +5,7 @@ SUBDIRS += \
     Adapter \
     Bridge \
     Builder \
+    ChainOfResponsibility \
     Command \
     Command_Queue \
     Composite \
