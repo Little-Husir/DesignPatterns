@@ -20,4 +20,5 @@ SUBDIRS += \
     SimpleFactory \
     Singleton \
     State \
+    Strategy \
     TemplateMethod
