@@ -4,6 +4,8 @@
 #include "visitor.h"
 #include "concrete_element.h"
 
+//具体访问者有两种 - 游客、清洁工，它们分别实现了不同的访问操作（游客只管吃喝玩乐，清洁工负责清理垃圾）
+
 // 游客
 class Tourist : public IVisitor
 {

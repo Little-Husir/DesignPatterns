@@ -3,7 +3,7 @@
 
 class IVisitor;
 
-// 地方
+// 景点中定义了一个 Accept() 接口，用于接受访问者的访问
 class IPlace
 {
 public:

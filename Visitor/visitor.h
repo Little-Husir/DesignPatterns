@@ -4,13 +4,13 @@
 class BellTower;
 class TerracottaWarriors;
 
-// 访问者
+// 创建访问者-访问者需要为每个景点都提供一个访问方法
 class IVisitor
 {
 public:
 	virtual ~IVisitor() {}
-	virtual void Visit(BellTower *) = 0;
-	virtual void Visit(TerracottaWarriors *) = 0;
+    virtual void Visit(BellTower *) = 0;//钟楼景点提供一个访问方法
+    virtual void Visit(TerracottaWarriors *) = 0;//兵马俑景点提供一个访问方法
 };
 
 #endif // VISITOR_H

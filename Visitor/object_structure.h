@@ -4,14 +4,18 @@
 #include "element.h"
 #include <list>
 
+//添加景点，并为每一个景点添加访问者
+
 // 城市（西安）
 class City
 {
 public:
+    //添加
 	void Attach(IPlace *place) {
 		m_places.push_back(place);
 	}
 
+    //移除
 	void Detach(IPlace *place) {
 		m_places.remove(place);
 	}
